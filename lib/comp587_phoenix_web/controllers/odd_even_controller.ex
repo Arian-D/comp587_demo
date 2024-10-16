@@ -2,6 +2,9 @@ defmodule Comp587PhoenixWeb.OddEvenController do
   require Integer
   use Comp587PhoenixWeb, :controller
 
+  def even?(conn) do
+    conn |> text("Try putting in a number")
+  end
   def even?(conn, %{"value" => value}) do
     case Integer.parse(value) do
     	{number, ""} when Integer.is_even(number) ->

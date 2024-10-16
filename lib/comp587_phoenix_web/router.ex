@@ -20,6 +20,7 @@ defmodule Comp587PhoenixWeb.Router do
     get "/", PageController, :home
     get "/:value", PageController, :home
     get "/odd_even/:value", OddEvenController, :even?
+    get "/odd_even/", OddEvenController, :even?
   end
 
   # Other scopes may use custom stacks.
